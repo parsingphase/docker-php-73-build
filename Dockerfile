@@ -5,5 +5,6 @@ RUN mkdir -p /usr/share/man/man1/
 RUN apt-get update
 RUN apt-get install -y libxslt-dev ant zlib1g-dev libzip-dev
 RUN docker-php-ext-install xsl zip intl
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
 ENTRYPOINT /bin/bash
